@@ -1,0 +1,225 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Theme Variables */
+:root {
+  --bg: #f7f7f7;
+  --text: #333;
+  --card: #ffffff;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f1f1f1;
+  --card: #1e1e1e;
+}
+
+/* Body */
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+/* linear-gradient(120deg, #667eea, #764ba2);*/
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: #34495E;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero span {
+  color: white;
+}
+
+/* Dark Mode Button */
+#theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: white;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Social Icons */
+.socials {
+  margin: 20px 0;
+}
+
+.socials a {
+  color: white;
+  font-size: 26px;
+  margin: 0 12px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.socials a {
+  text-decoration: none;   /* removes white line */
+  display: inline-flex;    /* fixes baseline gap */
+  align-items: center;
+  justify-content: center;
+}
+
+
+.socials a:hover {
+  transform: scale(1.2);
+  color: #ffd369;
+}
+
+/* Button */
+.btn {
+  margin-top: 30px;
+  padding: 10px 25px;
+  background: white;
+  color: #333;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ffd369;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Projects */
+.projects {
+  display: grid;
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+}
+.profile-pic {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+
+  width: 130px;
+  height: 130px;
+
+  border-radius: 50%;
+  background: white;          /* clean background */
+  padding: 6px;               /* space inside ring */
+
+  object-fit: contain;        /* ⬅ KEY FIX */
+  object-position: center;
+
+  border: 3px solid #ffd369;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+@media (max-width: 600px) {
+  .profile-pic {
+    width: 95px;
+    height: 95px;
+    top: 15px;
+    left: 15px;
+  }
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+.profile-pic:hover {
+  box-shadow: 0 0 0 4px rgba(255,211,105,0.6),
+              0 12px 30px rgba(0,0,0,0.4);
+}
+
+.skills {
+  text-align: center;
+}
+
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.skill {
+  background: var(--card);
+  padding: 20px;
+  width: 120px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+
+.skill:hover {
+  transform: translateY(-8px);
+}
+
+.skill i {
+  font-size: 40px;
+  color: #667eea;
+}
+
+.skill p {
+  margin-top: 10px;
+  font-weight: 600;
+}
+.resume-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #667eea;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+
+.resume-btn:hover {
+  background: #764ba2;
+  transform: translateY(-3px);
+}
